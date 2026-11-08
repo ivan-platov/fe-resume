@@ -26,6 +26,7 @@ jobs:
       - name: Prepare site
         run: |
           mkdir site
+          cp -R assets site/
           cp index.html 'Платов Иван.pdf' site/
       - uses: actions/upload-pages-artifact@v3
         with:
@@ -33,3 +34,4 @@ jobs:
       - name: Publish
         id: publish
         uses: actions/deploy-pages@v4
+
